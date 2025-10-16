@@ -1,0 +1,21 @@
+POST http://localhost:3000/api/usuarios
+Content-Type: application/json
+
+{
+  "nombre": "Luisa",
+  "email": "lu@anime.com",
+  "password": "12345"
+}
+
+POST http://localhost:3000/api/login Content-Type: application/json
+
+{"email": "lu@anime.com","password": "12345"}
+
+
+PUT http://localhost:3000/api/usuarios/recuperar
+Content-Type: application/json
+
+{"email": "lu@anime.com","nuevaPassword": "nueva123"}
+
+//GET http://localhost:3000/api/usuarios
+

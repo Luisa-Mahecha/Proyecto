@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg" style="background-color:#FF8838;">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="../Assets/Imagen/LogoMaArtboard1.png" alt="Logo" width="30" height="24"
+                        class="d-inline-block align-text-top me-2">
+                    MugiAnime
+                </a>
+                <style>
+                    .mover-3cm {
+                        margin-left: 3cm;
+                    }
+                </style>
+
+                <div class="dropdown ms-2">
+                    <button class="btn btn-light dropdown-toggle mover-3cm" style="background-color:#FF8138;"
+                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Categorías
+                    </button>
+
+
+                    <ul class="dropdown-menu" style="background-color:#FF8138;">
+
+                        <li><a class="dropdown-item" href="#">Acción </a></li>
+                        <li><a class="dropdown-item" href="#">Romance</a></li>
+                        <li><a class="dropdown-item" href="#">Comedia</a></li>
+                        <li><a class="dropdown-item" href="#">Fantasía</a></li>
+                        <li><a class="dropdown-item" href="#">Drama</a></li>
+
+                        <li><a class="dropdown-item" href="#">Musical</a></li>
+                        <li><a class="dropdown-item" href="#">Romance</a></li>
+                        <li><a class="dropdown-item" href="#">Ciencia Ficción</a></li>
+                        <li><a class="dropdown-item" href="#">Seinen</a></li>
+                        <li><a class="dropdown-item" href="#">Shoujo</a></li>
+
+                        <li><a class="dropdown-item" href="#">Shounen</a></li>
+                        <li><a class="dropdown-item" href="#">Pasado</a></li>
+                        <li><a class="dropdown-item" href="#">Deportes</a></li>
+                        <li><a class="dropdown-item" href="#">Sobrenatural</a></li>
+                        <li><a class="dropdown-item" href="#">Thriller</a></li>
+
+
+                    </ul>
+                </div>
+                <a href="../HTML/Popular.html" class="nav-link active" aria-current="page" href="#"
+                    style="margin-left:3cm; color:#000000;">Popular</a>
+
+
+            </div>
+
+
+
+
+            <nav class="navbar" style="background-color: #FF8838;">
+                <div class="container-fluid d-flex justify-content-between align-items-center">
+                    <form class="d-flex " role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search" />
+                        <button class="btn btn-outline-success" type="submit">
+                            <img src="../Assets/Imagen/Lupa.png" alt="Buscar" width="35" height="35">
+                        </button>
+                    </form>
+                    <div class="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <img src="../Assets/Imagen/LogoUsuario.webp" alt="Usuario" width="80" height="50"
+                                class="rounded-circle">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <img src="../Assets/Imagen/Configu.png" alt="Config" width="20" class="me-2">
+                                    Configuración
+                                </a>
+                            </li>
+                            <li><a href="../HTML/Quiénes somos.html" class="dropdown-item" href="#">Quiénes somos</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a href="../index.html" class="dropdown-item text-danger" href="#">Cerrar sesión</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+    </nav>
+    </div>
+    </nav>
+
+    <br><br><br><br><br>
+
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../Assets/Imagen/Noticia1.PNG" class="d-block w-100" alt="Noticia1" wide=50%>
+            </div>
+            <div class="carousel-item">
+                <img src="../Assets/Imagen/Noticia2.PNG" class="d-block w-100" alt="Noticia2" wide=50%>
+            </div>
+            <div class="carousel-item">
+                <img src="../Assets/Imagen/Noticia3.PNG" class="d-block w-100" alt="Noticia3" wide=50%>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <body style="background-color: #000000; color: #ffffff;">
+
+        <div class="container my-4">
+            <div class="row g-3">
+
+
+                <div class="col-md-3">
+                    <div class="card anime-card">
+                        <img src="../Assets/Imagen/Portada1.jpeg" class="card-img" alt="Diarios de la boticaria">
+                        <div class="overlay">
+                            <div class="overlay-text">
+                                <h5>Diarios de la boticaria</h5>
+                                <p>Maomao llevaba una vida tranquila ayudando a su padre, un boticario. Todo cambia el
+                                    día que la venden como sirvienta al palacio
+                                    del emperador, pero la vida entre nobles y realeza no es para ella. Cuando la
+                                    familia imperial enferma,
+                                    ella decide intervenir para encontrar una cura, lo que llama la atención de Jinshi,
+                                    un guapo oficial de palacio que
+                                    decide ascenderla como dama de compañía de una de las concubinas del emperador. ¡Su
+                                    habilidad con la medicina la hará conocida
+                                    en el palacio por ayudar a resolver muchos misterios!
+                                </p>
+                                <h6>
+                                    2 Temporadas - Sigue en emisión
+                                    <br>
+                                    24 capitulos
+                                </h6>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card anime-card">
+                        <img src="../Assets/Imagen/Portada2.jpeg" class="card-img" alt="Jujutsu Kaisen">
+                        <div class="overlay">
+                            <div class="overlay-text">
+                                <h5>Jujutsu Kaisen</h5>
+                                <p>¡Sigue al joven Yuji Itadori en esta serie de acción sobrenatural mientras entrena
+                                    como hechicero y explora el violento mundo de las maldiciones!
+                                    Yuji Itadori se traga un dedo maldito para salvar a alguien de su clase y ahora
+                                    Ryomen Sukuna, un poderoso hechicero malvado conocido como el
+                                    Rey de las Maldiciones, vive en su alma. Las maldiciones son seres sobrenaturales
+                                    creadas a partir de las emociones negativas de los humanos.
+                                    Esta energía maldita puede usarse como fuente de poder por parte de los hechiceros y
+                                    de los espíritus malditos.
+                                </p>
+                                <h6>
+                                    2 Temporadas - Sigue en emisión
+                                    <br>
+                                    27 capitulos
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card anime-card">
+                        <img src="../Assets/Imagen/Portada3.jpeg" class="card-img" alt="Haikyuu">
+                        <div class="overlay">
+                            <div class="overlay-text">
+                                <h5>Haikyuu</h5>
+                                <p>Basada en el manga original de Haruichi Furudate, el cual se publica en la Weekly
+                                    Shonen Jump, Haikyu!! es un anime deportivo protagonizado
+                                    por Shoyo Hinata y su amor por el voleibol. Siendo de corta estatura, le inspira un
+                                    jugador al que llamaban el "Pequeño Gigante",
+                                    y decide jugar tal y como lo hizo él. En su último año de secundaria por fin
+                                    consigue jugar su primer partido oficial,
+                                    pero es derrotado por completo por el equipo rival y su mejor jugador, "El rey de la
+                                    cancha", Tobio Kageyama.
+                                </p>
+                                <h6>
+                                    5 Temporadas
+                                    <br>
+                                    87 capitulos
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card anime-card">
+                        <img src="../Assets/Imagen/Portada4.jpeg" class="card-img" alt="Jojo's Bizarre adventure">
+                        <div class="overlay">
+                            <div class="overlay-text">
+                                <h5>Jojo's Bizarre adventure</h5>
+                                <p>En el antiguo México, los Aztecas prosperaron hasta el punto de contar con una
+                                    misteriosa máscara de piedra que proporciona
+                                    la vida eterna y el poder del verdadero gobernante a quien la porta. Pero la máscara
+                                    un día desapareció sin dejar rastro.
+                                    No es hasta el siglo XIX cuando es rescatada, y eso cambiará por completo la vida de
+                                    Jonathan Joestar y Dio Brando,
+                                    dos jóvenes que vivirán juntos y el destino los hará enfrentarse y descubrir un lado
+                                    oculto del mundo que no conocían.
+                                </p>
+                                <h6>
+                                    4 Temporadas
+                                    <br>
+                                    131 capitulos
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <style>
+            .anime-card {
+                position: relative;
+                overflow: hidden;
+                border: none;
+                cursor: pointer;
+            }
+
+            .anime-card img {
+                width: 100%;
+                height: auto;
+                transition: transform 0.3s ease;
+            }
+
+            .anime-card:hover img {
+                transform: scale(1.1);
+            }
+
+            .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #6d6d6d;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+
+            .anime-card:hover .overlay {
+                opacity: 1;
+            }
+
+            .overlay-text {
+                color: #ffffff;
+                text-align: center;
+            }
+        </style>
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+
+        <script src="dom.js"></script>
+    
+
+    </body>
+
+</html>
