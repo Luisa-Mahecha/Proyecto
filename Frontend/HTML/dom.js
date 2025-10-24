@@ -1,25 +1,24 @@
-console.log("✅ DOM conectado correctamente");
+console.log("DOM conectado correctamente");
 
-// --- Seleccionamos elementos existentes ---
 const titulo = document.querySelector(".hero-overlay h1");
 const descripcion = document.querySelector(".hero-overlay p");
 
-// Cambiamos su texto y color usando el DOM
+
 titulo.textContent = "🏴‍☠️ Bienvenido al Mundo de MugiAnime 🏴‍☠️";
-descripcion.style.color = "#FFD700"; // dorado
+descripcion.style.color = "#FFD700"; 
 descripcion.style.fontWeight = "bold";
 
-// --- Creamos un nuevo botón ---
+
 const boton = document.createElement("button");
 boton.textContent = "Mostrar Animes Recomendados";
 boton.className = "btn btn-danger mt-4";
 boton.style.backgroundColor = "#B91010";
 
-// Agregamos el botón al final del main
+
 const main = document.querySelector("main");
 main.appendChild(boton);
 
-// --- Creamos un contenedor para los animes ---
+
 const lista = document.createElement("ul");
 lista.style.listStyle = "none";
 lista.style.padding = "0";
@@ -28,11 +27,11 @@ lista.style.color = "white";
 lista.style.fontSize = "1.3rem";
 main.appendChild(lista);
 
-// --- Evento del botón ---
+
 boton.addEventListener("click", () => {
   const animes = ["One Piece", "Naruto", "Demon Slayer", "Attack on Titan", "Jujutsu Kaisen"];
 
-  lista.innerHTML = ""; // limpiar lista
+  lista.innerHTML = ""; 
 
   animes.forEach(anime => {
     const li = document.createElement("li");
@@ -42,17 +41,17 @@ boton.addEventListener("click", () => {
 });
 
 
-// Detectar si estamos en pagina2.html
+
 if (window.location.pathname.includes("pagina2.html")) {
   console.log("✅ DOM activo en página 2");
 
-  // --- Cambiar título del navbar dinámicamente ---
+  
   const titulo = document.querySelector(".navbar-brand");
   if (titulo) {
     titulo.textContent = "🌸 Bienvenida a MugiAnime 🌸";
   }
 
-  // --- Crear un botón para mostrar más animes ---
+  
   const contenedor = document.querySelector(".container.my-4");
   if (contenedor) {
     const boton = document.createElement("button");
@@ -60,7 +59,7 @@ if (window.location.pathname.includes("pagina2.html")) {
     boton.className = "btn btn-warning mt-4";
     contenedor.appendChild(boton);
 
-    // --- Evento del botón ---
+    
     boton.addEventListener("click", () => {
       const nuevosAnimes = [
         {
@@ -95,7 +94,7 @@ if (window.location.pathname.includes("pagina2.html")) {
         contenedor.querySelector(".row").appendChild(div);
       });
 
-      boton.remove(); // quitar el botón después de mostrar
+      boton.remove(); 
     });
   }
 }
