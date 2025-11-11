@@ -2,11 +2,9 @@ const express = require("express");
 const cors = require("cors");
 const db = require("./db.js");
 
-
 const app = express();
 app.use(express.json());
 app.use(cors());
-
 
 
 app.post("/api/usuarios", (req, res) => {
@@ -27,15 +25,12 @@ app.post("/api/usuarios", (req, res) => {
 });
 
 
-
-app.get("/api/Usuarios", (req, res) => {
-    db.query("SELECT * FROM Usuarios", (Error, resultados) => {
-        if(Error) return res.status(500).json({ Error: "Error en la base de datos"});
+app.get("/api/usuarios", (req, res) => {
+    db.query("SELECT * FROM Usuarios", (err, resultados) => {
+        if(err) return res.status(500).json({ error: "Error en la base de datos"});
         res.json(resultados);
     });
-     
 });
-
 
 
 app.post("/api/login", (req, res) => {
@@ -69,7 +64,6 @@ app.post("/api/login", (req, res) => {
 });
 
 
-
 app.put("/api/usuarios/recuperar", (req, res) => {
     const { email, nuevaPassword } = req.body;
 
@@ -77,21 +71,57 @@ app.put("/api/usuarios/recuperar", (req, res) => {
         return res.status(400).json({ error: "El email y la nueva contraseña son requeridos" });
     }
 
-    db.query("UPDATE Usuarios SET Password = ? WHERE Email = ?", 
-    [nuevaPassword, email], (err, result) => {
-        if (err) return res.status(500).json({ error: "Error en la base de datos" });
-        
+    db.query(
+        "UPDATE Usuarios SET Password = ? WHERE Email = ?", 
+        [nuevaPassword, email], 
+        (err, result) => {
+            if (err) return res.status(500).json({ error: "Error en la base de datos" });
+            
+            if (result.affectedRows === 0) {
+                return res.status(404).json({ error: "El correo no está registrado" });
+            }
+
+            res.json({ mensaje: "Contraseña actualizada con éxito" });
+        }
+    );
+});
+
+
+app.put("/api/usuarios/:id", (req, res) => {
+    const { id } = req.params;
+    const { nombre, email, password } = req.body;
+
+    db.query(
+        "UPDATE Usuarios SET Nombre = ?, Email = ?, Password = ? WHERE id = ?",
+        [nombre, email, password, id],
+        (err, result) => {
+            if (err) return res.status(500).json({ error: "Error al actualizar usuario" });
+
+            if (result.affectedRows === 0) {
+                return res.status(404).json({ error: "Usuario no encontrado" });
+            }
+
+            res.json({ mensaje: "Usuario actualizado con éxito" });
+        }
+    );
+});
+
+
+app.delete("/api/usuarios/:id", (req, res) => {
+    const { id } = req.params;
+
+    db.query("DELETE FROM Usuarios WHERE id = ?", id, (err, result) => {
+        if (err) return res.status(500).json({ error: "Error al eliminar el usuario" });
+
         if (result.affectedRows === 0) {
-            return res.status(404).json({ error: "El correo no está registrado" });
+            return res.status(404).json({ error: "Usuario no encontrado" });
         }
 
-        res.json({ mensaje: "Contraseña actualizada con éxito" });
+        res.json({ mensaje: "Usuario eliminado correctamente" });
     });
 });
 
 
-
 app.listen(3000, () => {
-    console.log("El servidor esta corriendo en el puerto http://localhost:3000");
-
+    console.log("El servidor está corriendo en http://localhost:3000");
 });
